@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+      {% load static %}
         <title>Refugio</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" type="text/css" href="css/estilos.css">
-        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css'%}">
+        <link href="{% static 'css/bootstrap.min.css'%}" type="text/css" rel="stylesheet"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     
@@ -26,20 +27,20 @@
                   <a class="nav-link" href="#">Inicio</a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link" href="file:///C:\Users\ignac\Desktop\Experiencia2_SepulvedaTorresZamarin_006D-main/Quienes_Somos.html">Quiénes Somos</a>
+                  <a class="nav-link" href="#">Quiénes Somos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="file:///C:\Users\ignac\Desktop\Experiencia2_SepulvedaTorresZamarin_006D-main/Galeria_de_fotos.html">Catálogo de Productos</a>
+                  <a class="nav-link" href="{% url 'Galeria_de_fotos' %}">Catálogo de Productos</a>
                 </li> 
               </ul>  
             </div>
-              <!-- insertar botones --> 
+              <!-- insertar botones -->
             <div >
-              <a href="file:///C:\Users\ignac\Desktop\Experiencia2_SepulvedaTorresZamarin_006D-main/iniciosesion.html" button type="button" class="btn btn-primary" id="btnprueba">Iniciar Sesión</button></a>
-              <a href="file:///C:\Users\ignac\Desktop\Experiencia2_SepulvedaTorresZamarin_006D-main/registrate.html" button type="button" class="btn btn-primary" id="btnprueba">Regístrate</button></a>
+              <a href="#" button type="button" class="btn btn-primary" id="btnprueba">Iniciar Sesión</button></a>
+              <a href="#" button type="button" class="btn btn-primary" id="btnprueba">Regístrate</button></a>
             </div>      
         </nav>          
-        <!-- fin navbar -->          
+        <!-- fin navbar -->
 
         
         <div class="galeria">

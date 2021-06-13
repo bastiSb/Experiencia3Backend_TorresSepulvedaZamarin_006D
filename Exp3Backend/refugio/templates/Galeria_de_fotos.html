@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+      {% load static %}
       <title>Refugio</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="stylesheet" type="text/css" href="css/estilos.css">
-      <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="{%static 'css/estilos.css'%}">
+      <link href="{% static 'css/bootstrap.min.css'%}" type="text/css" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
@@ -14,17 +15,18 @@
         <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#opciones">
         <span class="navbar-toggler-icon"></span>
         </button>      
+        {% load static %}  
         <!-- insertar logo -->            
         <a class="navbar-brand " href="#">
-          <img src="img/logo.png" width="60" height="60" alt="">
+          <img src="{%static 'img/logo.png'%}" width="60" height="60" alt="">
         </a>
         <div class="collapse navbar-collapse " id="opciones">   
           <ul class="navbar-nav">                
             <li class="nav-item ">
-              <a class="nav-link" href="file:///C:\Users\ignac\Desktop\Experiencia2_SepulvedaTorresZamarin_006D-main/Index.html">Inicio</a>
+              <a class="nav-link" href="{% url 'Index' %}">Inicio</a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="file:///C:\Users\ignac\Desktop\Experiencia2_SepulvedaTorresZamarin_006D-main/Quienes_Somos.html">Quiénes Somos</a>
+              <a class="nav-link" href="#">Quiénes Somos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Catálogo de Productos</a>
@@ -33,8 +35,8 @@
         </div>
           <!-- insertar botones --> 
         <div >
-          <a href="file:///C:/Users/C:\Users\ignac\Desktop\Experiencia2_SepulvedaTorresZamarin_006D-main/iniciosesion.html" button type="button" class="btn btn-primary" id="btnprueba">Iniciar Sesión</button></a>
-          <a href="file:///C:\Users\ignac\Desktop\Experiencia2_SepulvedaTorresZamarin_006D-main/registrate.html" button type="button" class="btn btn-primary" id="btnprueba">Regístrate</button></a>
+          <a href="#" button type="button" class="btn btn-primary" id="btnprueba">Iniciar Sesión</button></a>
+          <a href="#" button type="button" class="btn btn-primary" id="btnprueba">Regístrate</button></a>
         </div>      
     </nav>          
     <!-- fin navbar -->          
@@ -48,63 +50,63 @@
           <br>
           <div class="contenedor-imagenes">
               <div class="imagen">
-                  <img src="img/producto1.jpg" alt="">
+                  <img src="{% static 'img/producto1.jpg'%}" alt="">
                   <div class="overlay">
                       <h2><strong>Exfoliante Facial y Corporal de Café $4.990</strong></h2>
                       <p>Limpia tu piel, elimina y remueve células muertas, quita la suciedad, rejuvenece la capa dérmica y revitaliza tu cuerpo.</p>
                   </div>
               </div>
               <div class="imagen">
-                  <img src="img/Producto4.jpg" alt="">
+                  <img src="{% static 'img/Producto4.jpg'%}" alt="">
                   <div class="overlay">
                       <h2><strong>Exfoliante Facial y Corporal de Caracol $4.990</strong></h2>
                       <p>Limpia tu piel, elimina y remueve células muertas, quita la suciedad, rejuvenece la capa dérmica y revitaliza tu cuerpo.</p>
                   </div>
               </div>
               <div class="imagen">
-                  <img src="img/producto5.jpg" alt="">
+                  <img src="{% static 'img/producto5.jpg'%}" alt="">
                   <div class="overlay">
                       <h2><strong>Exfoliante Facial y Corporal de Carbón $4.990</strong></h2>
                       <p>Limpia tu piel, elimina y remueve células muertas, quita la suciedad, rejuvenece la capa dérmica y revitaliza tu cuerpo.</p>
                   </div>
               </div>
               <div class="imagen">
-                  <img src="img/producto6.jpg" alt="">
+                  <img src="{% static 'img/producto6.jpg'%}" alt="">
                   <div class="overlay">
                     <h2><strong>Exfoliante Facial y Corporal de Oliva $4.990</strong></h2>
                     <p>Limpia tu piel, elimina y remueve células muertas, quita la suciedad, rejuvenece la capa dérmica y revitaliza tu cuerpo.</p>
                   </div>
               </div>
               <div class="imagen">
-                <img src="img/producto2.jpg" alt="">
+                <img src="{% static 'img/producto2.jpg'%}" alt="">
                 <div class="overlay">
                     <h2><strong> Hidratante Aloe Vera $3.990</strong></h2>
                     <p>Refresca, calma, hidrata y repara los tejidos cutáneos, es ideal para aplicar después de agresiones a la piel como quemaduras, exposición al sol, irritaciones o picaduras de insectos.</p>
                 </div>
               </div>
               <div class="imagen">
-                  <img src="img/Producto3.jpg" alt="">
+                  <img src="{% static 'img/Producto3.jpg'%}" alt="">
                   <div class="overlay">
                       <h2><strong>Máscara Facial Dorada $3.990</strong></h2>
                       <p>Hidratante, ilumina la apariencia de la piel, te hace sentir la piel más firme y reduce la apariencia de las arrugas.</p>
                   </div>
               </div>
                 <div class="imagen">
-                    <img src="img/producto7.jpg" alt="">
+                    <img src="{% static 'img/producto7.jpg'%}" alt="">
                     <div class="overlay">
                         <h2><strong>Crema de Manos $2.490</strong></h2>
                         <p>Suave pero efectiva, activa las defensas propias de la piel para una protección y humectación duradera.</p>
                     </div>
                 </div>
               <div class="imagen">
-                  <img src="img/producto8.jpg" alt="">
+                  <img src="{% static 'img/producto8.jpg'%}" alt="">
                   <div class="overlay">
                       <h2><strong>Tónico Facial pétalos de flores $3.990</strong></h2>
                       <p>Calma, refresca y da un toque final al desmaquillado. Para lucir una piel perfectamente limpia y lisa.</p>
                   </div>
               </div>
               <div class="imagen">
-                  <img src="img/producto10.jpg" alt="">
+                  <img src="{%static 'img/producto10.jpg'%}" alt="">
                   <div class="overlay">
                       <h2><strong>Pétalos Quitaestalte de uñas $1.490</strong></h2>
                       <p>Práctico quita esmalte en pétalos, para llevar a donde quieras sin acetona y con deliciosos aromas florales.</p>
