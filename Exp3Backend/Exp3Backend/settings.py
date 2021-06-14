@@ -78,7 +78,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
         'NAME': '127.0.0.1:1521/xe',
-        'USER': 'REFUGIO',
+        'USER': 'refugio',
         'PASSWORD': '1234',
         'TEST': {
             'USER': 'default_test',
@@ -87,7 +87,6 @@ DATABASES = {
         },
     },
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -131,6 +130,7 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 STATICFILES_DIRS = (
     '/refugio/static',
