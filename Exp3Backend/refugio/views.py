@@ -26,7 +26,7 @@ def form_crear(request):
         producto_form = ProductoForm(request.POST)
         if producto_form.is_valid():
             producto_form.save()
-            return redirect('Index')
+            return redirect('form_ver')
     else:
        producto_form= ProductoForm()
     return render(request, 'refugio/form_crear.html', {'producto_form': producto_form})
@@ -43,3 +43,8 @@ def form_modificar(request,id):
             formulario.save()
             return redirect('form_ver')
     return render(request, 'refugio/form_modificar.html', datos)
+
+def form_eliminar(request,id):
+    producto = Producto.objects.get(idProducto=id)
+    producto.delete()
+    return redirect('form_ver')
