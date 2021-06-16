@@ -13,11 +13,11 @@ class ProductoForm(forms.ModelForm):
         fields = ['idProducto', 'nombreProducto', 'precioProducto', 'cantProducto',
         'categoria']
         labels ={
-            'idProducto': 'codigo', 
-            'nombreProducto': 'nombre', 
-            'precioProducto': 'precio', 
-            'cantProducto': 'cantidad',
-            'categoria': 'Categoria',
+            'idProducto': 'Código', 
+            'nombreProducto': 'Nombre', 
+            'precioProducto': 'Precio', 
+            'cantProducto': 'Cantidad',
+            'categoria': 'Categoría',
         }
         widgets={
             'idProducto': forms.TextInput(
