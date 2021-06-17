@@ -15,11 +15,7 @@ def Galeria_de_fotos(request):
 
 def form_ver(request):
     productos = Producto.objects.all()
-    datos = {
-        'productos': productos
-    }
-
-    return render(request, 'refugio/form_ver.html', context={'productos':productos})
+    return render(request, 'refugio/form_ver.html', {'productos':productos})
 
 def form_crear(request):
     if request.method=='POST': 
